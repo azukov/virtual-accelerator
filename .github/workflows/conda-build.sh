@@ -1,2 +1,2 @@
 conda info
-pip install -e .
+pip list

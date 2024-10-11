@@ -20,6 +20,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Git
+        run: apt-get install git
+
       # Install Miniconda
       - name: Setup Miniconda
         uses: goanpeca/setup-miniconda@v2
@@ -29,10 +32,6 @@ jobs:
           python-version: 3.9
           environment-file: virac.yml
           activate-environment: virac
-
-      - name: Install Git
-        run: conda install -c conda-forge git
-
 
       - name: Build
         run: |
