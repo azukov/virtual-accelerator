@@ -33,13 +33,13 @@ jobs:
           environment-file: virac.yml
           activate-environment: virac
 
-      - name: Build PyORBIT3
-        shell: bash -l {0}
-        run: |
-          conda info
-          conda list -n virac          
-          python -m pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
-          conda list
+#      - name: Build PyORBIT3
+#        shell: bash -l {0}
+#        run: |
+#          conda info
+#          conda list -n virac
+#          python -m pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+#          conda list
 
       - name: Build
         shell: bash -l {0}
