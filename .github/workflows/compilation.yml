@@ -38,7 +38,7 @@ jobs:
           conda info
           conda list -n virac
           conda list
-          pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+          python -m pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
 
       - name: Build
         run: |
