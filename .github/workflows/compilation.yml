@@ -34,6 +34,7 @@ jobs:
           activate-environment: virac
 
       - name: Build PyORBIT3
+        shell: bash -l {0}
         run: |
           conda info
           conda list -n virac
