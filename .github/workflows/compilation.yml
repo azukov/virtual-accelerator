@@ -15,6 +15,11 @@ jobs:
     container:
       image: ubuntu:latest
     steps:
+
+        # Imortant! This has to be done before checkout action
+        # Otherwise git could fail to check out full history
+        # It will cause issues with versioning of the built package
+        # since the version depends on gi repository state.
       - name: Install Compilers and Git
         run: apt-get update && apt-get install -y git build-essential
 
@@ -33,13 +38,6 @@ jobs:
           environment-file: virac.yml
           activate-environment: virac
 
-#      - name: Build PyORBIT3
-#        shell: bash -l {0}
-#        run: |
-#          conda info
-#          conda list -n virac
-#          python -m pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
-#          conda list
 
       - name: Build
         shell: bash -l {0}
