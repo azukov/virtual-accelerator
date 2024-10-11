@@ -42,7 +42,7 @@ jobs:
           conda list
 
       - name: Build
-#        shell: bash -l {0}
+        shell: bash -l {0}
         run: |
            .github/workflows/conda-build.sh
 
