@@ -30,7 +30,7 @@ setuptools.setup(
             "btf_va = virtaccl.site.BTF.btf_virtual_accelerator:main",
         ]},
 
-    packages=['virtaccl'], # setuptools.find_packages(),
+    packages=setuptools.find_packages(),
 
     classifiers=[
         "Programming Language :: Python :: 3",
