@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Git
-        run: apt-get update && apt-get install -y git
+        run: apt-get update && apt-get install -y git build-essential
 
       # Install Miniconda
       - name: Setup Miniconda
