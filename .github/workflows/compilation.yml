@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Git
+      - name: Install Compilers and Git
         run: apt-get update && apt-get install -y git build-essential
 
       # Install Miniconda

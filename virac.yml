@@ -10,4 +10,4 @@ dependencies:
 - pip
 - pip:
   - git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
-  - .
+#  - .
