@@ -4,7 +4,8 @@ pwd
 ls -alh
 sns_va &
 VA_PID=$(jobs -p)
+echo PID of VA is $VA_PID
 python virtaccl/examples/Corrector.py
 jobs -l
-kill $VA_PID
+kill -9 $VA_PID
 jobs -l

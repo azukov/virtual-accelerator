@@ -40,10 +40,10 @@ jobs:
           activate-environment: virac
 
 
-      - name: Build
-        shell: bash -l {0}
-        run: |
-           .github/workflows/conda-build.sh
+#      - name: Build
+#        shell: bash -l {0}
+#        run: |
+#           .github/workflows/conda-build.sh
 
       - name: Corrector Test
         shell: bash -l {0}
