@@ -1,3 +1,3 @@
-va &
+sns-va &
 echo $(jobs -p)
 python virtaccl/examples/Corrector.py
