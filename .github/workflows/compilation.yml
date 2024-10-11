@@ -33,6 +33,9 @@ jobs:
           environment-file: virac.yml
           activate-environment: virac
 
+      - name: Build PyORBIT3
+        run: pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+
       - name: Build
         run: |
            git config --global --add safe.directory /__w/virtual-accelerator/virtual-accelerator
