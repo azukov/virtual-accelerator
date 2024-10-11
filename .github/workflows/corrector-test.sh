@@ -1,3 +1,3 @@
-. /opt/conda/etc/profile.d/conda.sh
-conda activate virac
+va &
+echo $(jobs -p)
 python virtaccl/examples/Corrector.py

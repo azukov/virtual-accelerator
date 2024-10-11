@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          set-safe-directory: ''
 
       # Install Miniconda
       - name: Setup Miniconda
@@ -44,9 +45,10 @@ jobs:
         run: |
            .github/workflows/conda-build.sh
 
-#      - name: Corrector Test
-#        run: |
-#           .github/workflows/corrector-test.sh
+      - name: Corrector Test
+        shell: bash -l {0}
+        run: |
+           .github/workflows/corrector-test.sh
 #
 #      - name: Previous PVs Test
 #        run: |
