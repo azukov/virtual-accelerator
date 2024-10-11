@@ -34,7 +34,9 @@ jobs:
           activate-environment: virac
 
       - name: Build PyORBIT3
-        run: pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+        run: |
+          conda info
+          pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
 
       - name: Build
         run: |
