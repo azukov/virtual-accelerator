@@ -40,7 +40,7 @@ jobs:
           activate-environment: virac
 
       - name: Pytest
-#        shell: bash -l {0}
+        shell: bash -l {0}
         run: |
            pytest tests
 
