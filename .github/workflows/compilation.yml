@@ -39,6 +39,10 @@ jobs:
           environment-file: virac.yml
           activate-environment: virac
 
+      - name: Pytest
+#        shell: bash -l {0}
+        run: |
+           pytest tests
 
       - name: Corrector Test
         shell: bash -l {0}
