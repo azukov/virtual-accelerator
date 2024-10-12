@@ -12,7 +12,7 @@ def va_process():
     proc = subprocess.Popen(["sns_va"])
 
     # Wait for the VA to start serving PVs
-    sleep(1.0)
+    sleep(4.0)
     print('VA should be ready by now')
     yield proc
 
