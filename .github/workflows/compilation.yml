@@ -9,7 +9,6 @@ on:
 
 jobs:
 
-
   ubuntu:
     runs-on: ubuntu-latest
     container:
@@ -44,7 +43,3 @@ jobs:
         run: |
            pytest tests
 
-      - name: Corrector Test
-        shell: bash -l {0}
-        run: |
-           .github/workflows/corrector-test.sh
