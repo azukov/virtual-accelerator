@@ -32,16 +32,17 @@ jobs:
       - name: Install mamba
         uses: mamba-org/setup-micromamba@v1
         with:
-#          micromamba-version: '1.5.6-0'
           environment-file: virac.yml
           init-shell: bash
           cache-environment: true
           post-cleanup: 'all'
 
-      - name: Install PyORBIT and virac
+      # Although virac is already installed by mamba
+      # We reinstall it to make sure it uses the latest virac and
+      # not the cached version from mamba environment.
+      - name: Install virac
         shell: bash -l {0}
         run: |
-           pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
            pip install .
 
       - name: Pytest
