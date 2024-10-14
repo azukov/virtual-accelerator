@@ -20,7 +20,7 @@ jobs:
         # It will cause issues with versioning of the built package
         # since the version depends on git repository state.
       - name: Install Compilers and Git
-        run: apt-get update && apt-get install -y git build-essential
+        run: apt-get update && apt-get install -y git # build-essential
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,13 +28,13 @@ jobs:
           fetch-depth: 0
           set-safe-directory: ''
 
-      # Install Miniconda
+      # Install micromamba
       - name: Install mamba
         uses: mamba-org/setup-micromamba@v1
         with:
           environment-file: virac.yml
           init-shell: bash
-          cache-environment: true
+          cache-environment: false
           post-cleanup: 'all'
 
       # Although virac is already installed by mamba
