@@ -20,7 +20,7 @@ jobs:
         # It will cause issues with versioning of the built package
         # since the version depends on git repository state.
       - name: Install Compilers and Git
-        run: apt-get update && apt-get install -y git # build-essential
+        run: apt-get update && apt-get install -y git build-essential
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
         with:
           environment-file: virac.yml
           init-shell: bash
-          cache-environment: false
+          cache-environment: true
           post-cleanup: 'all'
 
       # Although virac is already installed by mamba
