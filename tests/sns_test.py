@@ -22,20 +22,20 @@ def va_process():
 
 
 def test_pv_connection(va_process):
-
+    # this line checks that the server is still running
     assert va_process.poll() is None
     x = caget('SCL_Diag:BPM04:xAvg', connection_timeout=0.1)
     assert x is not None
 
 
 def test_bad_pv(va_process):
-
     assert va_process.poll() is None
     x = caget('BAD:PV:Name', connection_timeout=0.1)
     assert x is None
 
 
 def test_corrector(va_process):
+    assert va_process.poll() is None
     corrector = "SCL_Mag:DCH00:B"
     corrector_set = "SCL_Mag:PS_DCH00:B_Set"
     bpm_device = "SCL_Diag:BPM04:xAvg"
