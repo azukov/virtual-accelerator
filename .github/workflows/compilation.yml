@@ -29,14 +29,14 @@ jobs:
           set-safe-directory: ''
 
       # Install Miniconda
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3
+      - name: Install mamba
+        uses: mamba-org/setup-micromamba@v1
         with:
-          miniconda-version: "latest"
-          auto-update-conda: true
-          python-version: 3.9
+#          micromamba-version: '1.5.6-0'
           environment-file: virac.yml
-          activate-environment: virac
+          init-shell: bash
+          cache-environment: true
+          post-cleanup: 'all'
 
       - name: Pytest
         shell: bash -l {0}
