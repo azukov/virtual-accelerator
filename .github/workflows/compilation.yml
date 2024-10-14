@@ -38,6 +38,12 @@ jobs:
           cache-environment: true
           post-cleanup: 'all'
 
+      - name: Install PyORBIT and virac
+        shell: bash -l {0}
+        run: |
+           pip install git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+           pip install .
+
       - name: Pytest
         shell: bash -l {0}
         run: |

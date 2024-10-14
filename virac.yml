@@ -7,8 +7,8 @@ dependencies:
 - fftw
 - pkg-config
 - pyepics
+- pytest
 - pip
-- pip:
-  - git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
-  - .
-  - pytest
+#- pip:
+#  - git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git
+#  - .
